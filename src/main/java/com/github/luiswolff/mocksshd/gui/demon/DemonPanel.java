@@ -7,11 +7,11 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.github.luiswolff.mocksshd.sshd.MockSshDemon;
+import com.github.luiswolff.mocksshd.sshd.StartCommand;
 
 public class DemonPanel extends JPanel {
 
-    public DemonPanel(DemonController controller, MockSshDemon model) {
+    public DemonPanel(DemonController controller, StartCommand model) {
         super(new FlowLayout());
 
 

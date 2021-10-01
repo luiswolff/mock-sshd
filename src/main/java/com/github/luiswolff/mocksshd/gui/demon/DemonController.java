@@ -5,15 +5,16 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 import com.github.luiswolff.mocksshd.sshd.MockSshDemon;
+import com.github.luiswolff.mocksshd.sshd.StartCommand;
 
 public class DemonController {
 
-    private MockSshDemon model = MockSshDemon.getInstance();
+    private StartCommand model = new StartCommand();
     private DemonPanel view = new DemonPanel(this, model);
 
     void startSshd(ActionEvent l) {
         try {
-            model.start();
+            MockSshDemon.getInstance().start(model); // TODO: it must be ensured that demon can't be started twice
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -22,7 +23,7 @@ public class DemonController {
 
     void stopSshd(ActionEvent l) {
         try {
-            model.stop(); // TODO: Apache Sshd can only be started once. So either after stopping a new Demon must be created or the demon must create a new server after stopping
+            MockSshDemon.getInstance().stop();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
