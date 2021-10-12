@@ -11,9 +11,10 @@ import com.github.luiswolff.mocksshd.sshd.StartCommand;
 
 public class DemonPanel extends JPanel {
 
+    private static final long serialVersionUID = -6403969028249994552L;
+
     public DemonPanel(DemonController controller, StartCommand model) {
         super(new FlowLayout());
-
 
         addPortInput(model.getPort());
         addButton("start", controller::startSshd);
