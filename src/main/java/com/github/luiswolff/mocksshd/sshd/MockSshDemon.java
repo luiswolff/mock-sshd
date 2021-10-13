@@ -22,6 +22,10 @@ public class MockSshDemon {
         this.sftpServer.stop();
     }
 
+    public boolean isRunning() {
+        return sftpServer != null && sftpServer.isStarted();
+    }
+
     public static MockSshDemon getInstance() {
         return INSTANCE;
     }
