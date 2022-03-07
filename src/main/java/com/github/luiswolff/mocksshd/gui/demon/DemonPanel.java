@@ -84,7 +84,7 @@ public class DemonPanel extends JPanel {
     model.setHost(hostInput.getText());
     model.setRoot(rootInput.getText());
     model.setUser(userInput.getText());
-    model.setRoot(passInput.getText());
+    model.setPass(passInput.getText());
   }
 
   void demonStarted() {
