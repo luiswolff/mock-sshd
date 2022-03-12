@@ -29,7 +29,6 @@
     </scm>
 
     <build>
-        <finalName>${project.artifactId}.original</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
