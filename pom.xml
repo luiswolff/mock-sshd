@@ -26,6 +26,11 @@
         </dependency>
     </dependencies>
 
+    <scm>
+         <developerConnection>scm:git:git@github.com:luiswolff/mock-sshd.git</developerConnection>
+         <tag>HEAD</tag>
+    </scm>
+
     <build>
         <finalName>${project.artifactId}.original</finalName>
         <plugins>
